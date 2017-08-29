@@ -4,9 +4,9 @@
   <subtitle>潇忆飞的个人博客</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.songfeiweb.cn/"/>
+  <link href="http://www.songfei.site/"/>
   <updated>2017-07-29T16:46:17.235Z</updated>
-  <id>http://www.songfeiweb.cn/</id>
+  <id>http://www.songfei.site/</id>
   
   <author>
     <name>潇忆飞</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.songfeiweb.cn/2017/08/09/hello-world/"/>
-    <id>http://www.songfeiweb.cn/2017/08/09/hello-world/</id>
+    <link href="http://www.songfei.site/2017/08/09/hello-world/"/>
+    <id>http://www.songfei.site/2017/08/09/hello-world/</id>
     <published>2017-08-09T07:36:55.397Z</published>
     <updated>2017-07-29T16:46:17.235Z</updated>
     
@@ -44,8 +44,8 @@
   
   <entry>
     <title>JavaScript规范</title>
-    <link href="http://www.songfeiweb.cn/2017/07/30/JavaScript%E8%A7%84%E8%8C%83/"/>
-    <id>http://www.songfeiweb.cn/2017/07/30/JavaScript规范/</id>
+    <link href="http://www.songfei.site/2017/07/30/JavaScript%E8%A7%84%E8%8C%83/"/>
+    <id>http://www.songfei.site/2017/07/30/JavaScript规范/</id>
     <published>2017-07-30T14:36:42.000Z</published>
     <updated>2017-07-30T14:51:47.510Z</updated>
     
@@ -339,17 +339,17 @@
     
     </summary>
     
-      <category term="学习" scheme="http://www.songfeiweb.cn/categories/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://www.songfei.site/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="JavaScript" scheme="http://www.songfeiweb.cn/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.songfei.site/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript+CSS  常用代码汇总</title>
-    <link href="http://www.songfeiweb.cn/2017/07/30/JavaScript-CSS-%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%B1%87%E6%80%BB/"/>
-    <id>http://www.songfeiweb.cn/2017/07/30/JavaScript-CSS-常用代码汇总/</id>
+    <link href="http://www.songfei.site/2017/07/30/JavaScript-CSS-%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E6%B1%87%E6%80%BB/"/>
+    <id>http://www.songfei.site/2017/07/30/JavaScript-CSS-常用代码汇总/</id>
     <published>2017-07-30T13:03:11.000Z</published>
     <updated>2017-07-30T13:44:38.462Z</updated>
     
@@ -439,12 +439,12 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://www.songfeiweb.cn/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://www.songfei.site/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
-      <category term="JavaScript" scheme="http://www.songfeiweb.cn/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://www.songfei.site/tags/JavaScript/"/>
     
-      <category term="CSS3" scheme="http://www.songfeiweb.cn/tags/CSS3/"/>
+      <category term="CSS3" scheme="http://www.songfei.site/tags/CSS3/"/>
     
   </entry>
   
