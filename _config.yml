@@ -13,7 +13,7 @@ timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.songfeiweb.cn
+url: http://www.songfei.site
 root: /
 permalink: :year/:month/:day/:title/ #/blog/:title.html
 permalink_defaults:
@@ -87,8 +87,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:songfeiweb/songfeiweb.github.io.git
-  branch: master
+  repo:
+      github: git@github.com:songfeiweb/songfeiweb.github.io.git,master
+      coding: git@git.coding.net:songfeiweb/hexo-blog.git,master
 
   # 部署到coding.net。取消注释，可同时部署
   #coding: git@git.coding.net:xuezhisd/blog.git,coding-pages
