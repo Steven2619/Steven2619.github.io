@@ -113,18 +113,18 @@
 
 
 
-<meta name="description" content="JavaScript规范内容列表 类型 对象 数组 字符串 函数 属性 变量">
+<meta name="description" content="JavaScript规范内容列表 类型 对象 数组 字符串 函数 属性 变量 条件表达式和等号 块 注释 空白 逗号 分号 类型转换 命名约定 存取器 构造器 事件 模块 jQuery ES5 兼容性">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript规范">
 <meta property="og:url" content="http://www.songfei.site/2017/07/30/JavaScript规范/index.html">
 <meta property="og:site_name" content="Xiao yifei&#39;s blog">
-<meta property="og:description" content="JavaScript规范内容列表 类型 对象 数组 字符串 函数 属性 变量">
+<meta property="og:description" content="JavaScript规范内容列表 类型 对象 数组 字符串 函数 属性 变量 条件表达式和等号 块 注释 空白 逗号 分号 类型转换 命名约定 存取器 构造器 事件 模块 jQuery ES5 兼容性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-30T14:51:47.510Z">
+<meta property="og:updated_time" content="2017-08-30T06:20:46.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript规范">
-<meta name="twitter:description" content="JavaScript规范内容列表 类型 对象 数组 字符串 函数 属性 变量">
+<meta name="twitter:description" content="JavaScript规范内容列表 类型 对象 数组 字符串 函数 属性 变量 条件表达式和等号 块 注释 空白 逗号 分号 类型转换 命名约定 存取器 构造器 事件 模块 jQuery ES5 兼容性">
 
 
 
@@ -492,7 +492,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,729 字
+                  2,639 字
                 </span>
               
 
@@ -533,11 +533,8 @@
 <li><a href="#strings">字符串</a></li>
 <li><a href="#functions">函数</a></li>
 <li><a href="#properties">属性</a></li>
-<li><p><a href="#variables">变量</a></p>
-<a id="more"></a>
-</li>
-<li><p><a href="#conditionals">条件表达式和等号</a></p>
-</li>
+<li><a href="#variables">变量</a></li>
+<li><a href="#conditionals">条件表达式和等号</a></li>
 <li><a href="#blocks">块</a></li>
 <li><a href="#comments">注释</a></li>
 <li><a href="#whitespace">空白</a></li>
@@ -550,7 +547,9 @@
 <li><a href="#events">事件</a></li>
 <li><a href="#modules">模块</a></li>
 <li><a href="#jquery">jQuery</a></li>
-<li><a href="#es5">ES5 兼容性</a></li>
+<li><p><a href="#es5">ES5 兼容性</a></p>
+<a id="more"></a>
+</li>
 </ol>
 <h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a><a name="types">类型</a></h2><ul>
 <li><p><strong>原始值</strong>: 相当于传值</p>
@@ -593,7 +592,7 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> len = items.length,</div><div class="line">    itemsCopy = [],</div><div class="line">    i;</div><div class="line"></div><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">  itemsCopy[i] = items[i];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line">itemsCopy = items.slice();</div></pre></td></tr></table></figure>
 </li>
 <li><p>使用slice将类数组的对象转成数组.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trigger</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">  ...</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">trigger</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</div><div class="line">  <span class="comment">//...dosomething</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong><a href="#TOC">[⬆]</a></strong></p>
 </li>
 </ul>
@@ -641,10 +640,6 @@
 <li><p>最后再声明未赋值的变量，当你想引用之前已赋值变量的时候很有用。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> i, len, dragonball,</div><div class="line">    items = getItems(),</div><div class="line">    goSportsTeam = <span class="literal">true</span>;</div><div class="line"></div><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">var</span> i, items = getItems(),</div><div class="line">    dragonball,</div><div class="line">    goSportsTeam = <span class="literal">true</span>,</div><div class="line">    len;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">var</span> items = getItems(),</div><div class="line">    goSportsTeam = <span class="literal">true</span>,</div><div class="line">    dragonball,</div><div class="line">    length,</div><div class="line">    i;</div></pre></td></tr></table></figure>
 </li>
-<li><p>在作用域顶部声明变量，避免变量声明和赋值引起的相关问题。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  test();</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'doing stuff..'</span>);</div><div class="line"></div><div class="line">  <span class="comment">//..other stuff..</span></div><div class="line"></div><div class="line">  <span class="keyword">var</span> name = getName();</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (name === <span class="string">'test'</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> name = getName();</div><div class="line"></div><div class="line">  test();</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'doing stuff..'</span>);</div><div class="line"></div><div class="line">  <span class="comment">//..other stuff..</span></div><div class="line"></div><div class="line">  <span class="keyword">if</span> (name === <span class="string">'test'</span>) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> name;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> name = getName();</div><div class="line"></div><div class="line">  <span class="keyword">if</span> (!<span class="built_in">arguments</span>.length) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (!<span class="built_in">arguments</span>.length) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="keyword">var</span> name = getName();</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong><a href="#TOC">[⬆]</a></strong></p>
-</li>
 </ul>
 <h2 id="条件表达式和等号"><a href="#条件表达式和等号" class="headerlink" title="条件表达式和等号"></a><a name="conditionals">条件表达式和等号</a></h2><ul>
 <li>适当使用 <code>===</code> 和 <code>!==</code> 以及 <code>==</code> 和 <code>!=</code>.</li>
@@ -668,7 +663,7 @@
 </ul>
 <h2 id="块"><a href="#块" class="headerlink" title="块"></a><a name="blocks">块</a></h2><ul>
 <li><p>给所有多行的块使用大括号</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">if</span> (test)</div><div class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">if</span> (test) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">if</span> (test) &#123;</div><div class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; <span class="keyword">return</span> <span class="literal">false</span>; &#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">if</span> (test)</div><div class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">if</span> (test) <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">if</span> (test) &#123;</div><div class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><strong><a href="#TOC">[⬆]</a></strong></p>
 </li>
 </ul>

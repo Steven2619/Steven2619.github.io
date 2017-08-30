@@ -4,25 +4,8 @@
 
     
   <url>
-    <loc>http://www.songfei.site/2017/07/29/hello-world/</loc>
-    <lastmod>2017-08-30T06:07:17.535Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-07-29T14:36:42.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.songfei.site/2017/07/30/JavaScript%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2017-07-30T14:51:47.510Z</lastmod>
+    <lastmod>2017-08-30T06:20:46.485Z</lastmod>
     <data>
         <display>
         <title>JavaScript规范</title>
@@ -35,6 +18,23 @@
              
               <breadCrumb title="学习" url="http://www.songfei.site/categories/%E5%AD%A6%E4%B9%A0/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.songfei.site/2017/07/29/hello-world/</loc>
+    <lastmod>2017-08-30T06:07:17.535Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-07-29T14:36:42.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
         </display>
     </data>
     </url>
