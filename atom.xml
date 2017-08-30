@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.songfei.site/"/>
-  <updated>2017-08-30T06:20:46.485Z</updated>
+  <updated>2017-08-30T09:40:37.405Z</updated>
   <id>http://www.songfei.site/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浏览器兼容性的解决方案小结</title>
+    <link href="http://www.songfei.site/2017/08/30/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%B0%8F%E7%BB%93/"/>
+    <id>http://www.songfei.site/2017/08/30/浏览器兼容性的解决方案小结/</id>
+    <published>2017-08-30T09:23:54.000Z</published>
+    <updated>2017-08-30T09:40:37.405Z</updated>
+    
+    <content type="html"><![CDATA[<p>浏览器的兼容性问题，往往是个别浏览器（”个别”相信大家都知道说的谁啦！）对于一些标准的定义不一致导致的。<br>俗话说：没有IE就没有伤害.下面就个人总结的一些兼容方案与大家分享！</p>
+<a id="more"></a>
+<h2 id="重置文件reset"><a href="#重置文件reset" class="headerlink" title="重置文件reset"></a>重置文件reset</h2><p>不同浏览器的默认样式存在差异，可以使用定制重置文件reset.css来清除这些差异，<br>也可以引用 <a href="https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css" target="_blank" rel="external">Normalize.css</a> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://cdn.bootcss.com/normalize/7.0.0/normalize.min.css"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span>&gt;</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;浏览器的兼容性问题，往往是个别浏览器（”个别”相信大家都知道说的谁啦！）对于一些标准的定义不一致导致的。&lt;br&gt;俗话说：没有IE就没有伤害.下面就个人总结的一些兼容方案与大家分享！&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://www.songfei.site/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="Google" scheme="http://www.songfei.site/tags/Google/"/>
+    
+      <category term="Firefox" scheme="http://www.songfei.site/tags/Firefox/"/>
+    
+      <category term="IE" scheme="http://www.songfei.site/tags/IE/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript规范</title>
